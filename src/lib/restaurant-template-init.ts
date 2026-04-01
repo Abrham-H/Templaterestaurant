@@ -1,9 +1,9 @@
 // @ts-nocheck
-export function initHabeshaPage(): void {
+export function initRestaurantTemplatePage(): void {
     const scrollArrow = document.getElementById("scrollArrow");
     const heroVideo = document.querySelector(".hero-video-bg");
     const curtain = document.getElementById("pageCurtain");
-    const coffeeSection = document.getElementById("kaffee");
+    const coffeeSection = document.getElementById("erlebnis");
     const coffeeVideo = document.getElementById("coffeeVideo");
     const coffeeOverlay = document.getElementById("coffeeOverlay");
     const coffeePlayWrap = document.getElementById("coffeePlayWrap");
@@ -481,7 +481,7 @@ export function initHabeshaPage(): void {
         return;
       }
 
-      const introSeen = sessionStorage.getItem("habesha-intro-seen") === "1";
+      const introSeen = sessionStorage.getItem("restaurant-template-intro-seen") === "1";
 
       if (introSeen) {
         curtain.classList.remove("intro-active", "intro-leaving", "mid", "show-subtitle");
@@ -499,7 +499,7 @@ export function initHabeshaPage(): void {
       curtain.classList.add("intro-leaving");
       await wait(700);
       curtain.classList.remove("intro-active", "intro-leaving");
-      sessionStorage.setItem("habesha-intro-seen", "1");
+      sessionStorage.setItem("restaurant-template-intro-seen", "1");
     }
 
     window.addEventListener("load", () => {
@@ -646,4 +646,3 @@ export function initHabeshaPage(): void {
     });
 
 }
-

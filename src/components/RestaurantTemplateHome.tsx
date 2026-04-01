@@ -2,11 +2,16 @@
 
 import type { CSSProperties } from "react";
 import { useEffect } from "react";
-import { initHabeshaPage } from "@/lib/habesha-init";
+import { initRestaurantTemplatePage } from "@/lib/restaurant-template-init";
 
-export default function HabeshaHome() {
+const HERO_VIDEO =
+  "https://videos.pexels.com/video-files/3296271/3296271-uhd_2560_1440_25fps.mp4";
+const FEATURE_VIDEO =
+  "https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4";
+
+export default function RestaurantTemplateHome() {
   useEffect(() => {
-    initHabeshaPage();
+    initRestaurantTemplatePage();
   }, []);
 
   return (
@@ -14,7 +19,7 @@ export default function HabeshaHome() {
       <header className="navbar" id="navbar">
         <div className="container nav-inner">
           <a href="#top" className="logo">
-            HABESHA
+            MUSTER
           </a>
           <button
             className="menu-toggle"
@@ -31,7 +36,7 @@ export default function HabeshaHome() {
               <a href="#menu">Menü</a>
             </li>
             <li>
-              <a href="#kaffee">Kaffee</a>
+              <a href="#erlebnis">Erlebnis</a>
             </li>
             <li>
               <a href="#ueber-uns">Über uns</a>
@@ -58,18 +63,14 @@ export default function HabeshaHome() {
             aria-hidden="true"
             poster="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80"
           >
-            <source src="/videos/hero.mp4" type="video/mp4" />
-            <source
-              src="https://videos.pexels.com/video-files/3296271/3296271-uhd_2560_1440_25fps.mp4"
-              type="video/mp4"
-            />
+            <source src={HERO_VIDEO} type="video/mp4" />
           </video>
           <div className="hero-overlay" />
           <div className="hero-content reveal visible">
-            <div className="badge">◎ Schreinerstrasse 64, 8004 Zürich</div>
-            <h1>Restaurant Habesha</h1>
+            <div className="badge">◎ Musterstrasse 1, 8000 Musterstadt</div>
+            <h1>Restaurant Vorlage</h1>
             <div className="hero-divider" aria-hidden="true" />
-            <p>Authentische Spezialitäten aus Äthiopien & Eritrea</p>
+            <p>Beispieltext: Ihr Claim oder Küchenrichtung — hier anpassen.</p>
             <div className="hero-actions">
               <a href="#menu" className="btn btn-outline">
                 Speisekarte
@@ -98,32 +99,32 @@ export default function HabeshaHome() {
             <div
               className="highlight-item animate-hidden"
               data-animate="stats-item"
-              data-count="500"
+              data-count="100"
               data-suffix="+"
             >
               <span className="highlight-dot" />
               <strong className="stat-number">0</strong>
-              <span className="stat-label">Bewertungen</span>
+              <span className="stat-label">Beispiel-Bewertungen</span>
             </div>
             <div
               className="highlight-item animate-hidden"
               data-animate="stats-item"
-              data-count="2019"
+              data-count="2020"
               data-suffix=""
             >
               <span className="highlight-dot" />
               <strong className="stat-number">0</strong>
-              <span className="stat-label">Seit</span>
+              <span className="stat-label">Seit (Musterjahr)</span>
             </div>
             <div
               className="highlight-item animate-hidden"
               data-animate="stats-item"
-              data-count="8004"
+              data-count="8000"
               data-suffix=""
             >
               <span className="highlight-dot" />
               <strong className="stat-number">0</strong>
-              <span className="stat-label">Zürich, Schreinerstrasse</span>
+              <span className="stat-label">PLZ / Standort (Muster)</span>
             </div>
           </div>
         </div>
@@ -135,7 +136,7 @@ export default function HabeshaHome() {
         >
           <div className="container">
             <h2 className="animate-hidden" data-animate="menu-heading">
-              Unsere <span className="heading-italic">Spezialitäten</span>
+              Unsere <span className="heading-italic">Muster-Gerichte</span>
             </h2>
             <div className="tabs" role="tablist" aria-label="Menüfilter">
               <button
@@ -181,16 +182,16 @@ export default function HabeshaHome() {
                 <figure>
                   <img
                     loading="lazy"
-                    src="https://images.unsplash.com/photo-1514516345957-556ca7b4d90a?auto=format&fit=crop&w=900&q=80"
-                    alt="Zigni Gericht"
+                    src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=80"
+                    alt="Mustergericht Fleisch"
                   />
                 </figure>
                 <div className="menu-content">
                   <div className="menu-head">
-                    <h3>Zigni</h3>
-                    <span className="price">CHF 22</span>
+                    <h3>Mustergericht A</h3>
+                    <span className="price">CHF 00</span>
                   </div>
-                  <p>Würziges Rindfleisch-Stew.</p>
+                  <p>Kurzbeschreibung Platzhalter — Text ersetzen.</p>
                 </div>
               </article>
               <article
@@ -202,15 +203,15 @@ export default function HabeshaHome() {
                   <img
                     loading="lazy"
                     src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80"
-                    alt="Shiro Gericht"
+                    alt="Mustergericht vegetarisch"
                   />
                 </figure>
                 <div className="menu-content">
                   <div className="menu-head">
-                    <h3>Shiro</h3>
-                    <span className="price">CHF 18</span>
+                    <h3>Mustergericht B</h3>
+                    <span className="price">CHF 00</span>
                   </div>
-                  <p>Kichererbsenpüree mit Gewürzen.</p>
+                  <p>Kurzbeschreibung Platzhalter — Text ersetzen.</p>
                 </div>
               </article>
               <article
@@ -222,15 +223,15 @@ export default function HabeshaHome() {
                   <img
                     loading="lazy"
                     src="https://images.unsplash.com/photo-1608039790184-a7f7d53f0f5f?auto=format&fit=crop&w=900&q=80"
-                    alt="Injera Kombi"
+                    alt="Mustergericht Kombi"
                   />
                 </figure>
                 <div className="menu-content">
                   <div className="menu-head">
-                    <h3>Injera Kombi</h3>
-                    <span className="price">CHF 24</span>
+                    <h3>Mustergericht C</h3>
+                    <span className="price">CHF 00</span>
                   </div>
-                  <p>Traditionelles Fladenbrot mit Beilagen.</p>
+                  <p>Kurzbeschreibung Platzhalter — Text ersetzen.</p>
                 </div>
               </article>
               <article
@@ -242,15 +243,15 @@ export default function HabeshaHome() {
                   <img
                     loading="lazy"
                     src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80"
-                    alt="Eritreischer Kaffee"
+                    alt="Mustergetränk"
                   />
                 </figure>
                 <div className="menu-content">
                   <div className="menu-head">
-                    <h3>Eritreischer Kaffee</h3>
-                    <span className="price">CHF 6</span>
+                    <h3>Mustergetränk</h3>
+                    <span className="price">CHF 00</span>
                   </div>
-                  <p>Traditionelle Zeremonie.</p>
+                  <p>Kurzbeschreibung Platzhalter — Text ersetzen.</p>
                 </div>
               </article>
               <article
@@ -262,15 +263,15 @@ export default function HabeshaHome() {
                   <img
                     loading="lazy"
                     src="https://images.unsplash.com/photo-1543353071-10c8ba85a904?auto=format&fit=crop&w=900&q=80"
-                    alt="Tibs Gericht"
+                    alt="Mustergericht Fleisch 2"
                   />
                 </figure>
                 <div className="menu-content">
                   <div className="menu-head">
-                    <h3>Tibs</h3>
-                    <span className="price">CHF 25</span>
+                    <h3>Mustergericht D</h3>
+                    <span className="price">CHF 00</span>
                   </div>
-                  <p>Gebratenes Fleisch mit Gemüse.</p>
+                  <p>Kurzbeschreibung Platzhalter — Text ersetzen.</p>
                 </div>
               </article>
               <article
@@ -282,15 +283,15 @@ export default function HabeshaHome() {
                   <img
                     loading="lazy"
                     src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80"
-                    alt="Ful Gericht"
+                    alt="Mustergericht vegetarisch 2"
                   />
                 </figure>
                 <div className="menu-content">
                   <div className="menu-head">
-                    <h3>Ful</h3>
-                    <span className="price">CHF 16</span>
+                    <h3>Mustergericht E</h3>
+                    <span className="price">CHF 00</span>
                   </div>
-                  <p>Favabohnen mit Gewürzen.</p>
+                  <p>Kurzbeschreibung Platzhalter — Text ersetzen.</p>
                 </div>
               </article>
             </div>
@@ -299,7 +300,7 @@ export default function HabeshaHome() {
 
         <section
           className="coffee-cinematic section-divider animate-hidden"
-          id="kaffee"
+          id="erlebnis"
           data-animate="coffee-cinematic"
         >
           <video
@@ -308,9 +309,9 @@ export default function HabeshaHome() {
             loop
             playsInline
             preload="none"
-            poster="/images/coffee-poster.jpg"
+            poster="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80"
           >
-            <source src="/videos/coffee.mp4" type="video/mp4" />
+            <source src={FEATURE_VIDEO} type="video/mp4" />
           </video>
           <div className="coffee-video-overlay" />
 
@@ -350,14 +351,14 @@ export default function HabeshaHome() {
           </div>
 
           <div className="coffee-overlay-content" id="coffeeOverlay">
-            <div className="coffee-label">✦ HABESHA ORIGINAL</div>
+            <div className="coffee-label">✦ MUSTER-VIDEO</div>
             <div className="coffee-title-wrap">
               <h2 className="coffee-title">
-                <span className="coffee-word">Die</span>
-                <span className="coffee-word">Kaffezeremonie</span>
+                <span className="coffee-word">Ihr</span>
+                <span className="coffee-word">Highlight</span>
               </h2>
               <div className="coffee-title-divider" />
-              <p className="coffee-subtitle">Handgemacht. Traditionell. Unvergesslich.</p>
+              <p className="coffee-subtitle">Stock-Video als Platzhalter — eigenes Material einbinden.</p>
             </div>
           </div>
 
@@ -366,11 +367,11 @@ export default function HabeshaHome() {
               type="button"
               className="coffee-play-btn"
               id="coffeePlayBtn"
-              aria-label="Kaffezeremonie abspielen"
+              aria-label="Muster-Video abspielen"
             >
               <span className="coffee-play-icon" aria-hidden="true" />
             </button>
-            <p className="coffee-play-caption">Die Kaffezeremonie erleben</p>
+            <p className="coffee-play-caption">Muster-Video ansehen</p>
           </div>
 
           <div className="coffee-spinner" id="coffeeSpinner" aria-hidden="true" />
@@ -407,7 +408,7 @@ export default function HabeshaHome() {
         </section>
 
         <div className="coffee-divider-band">
-          Schreinerstrasse 64 · 8004 Zürich · 076 468 88 60
+          Musterstrasse 1 · 8000 Musterstadt · +41 00 000 00 00
         </div>
 
         <section
@@ -417,18 +418,26 @@ export default function HabeshaHome() {
         >
           <div className="container">
             <h2 className="animate-hidden" data-animate="section-heading">
-              Lernen Sie uns kennen
+              Das Team (Muster)
             </h2>
             <div className="team-grid">
               <article className="team-card animate-hidden" data-animate="team-card">
-                <img loading="lazy" src="/inhaber.png" alt="Inhaber" />
-                <h3>Tsehaye</h3>
-                <p>Inhaber & Geschäftsführer</p>
+                <img
+                  loading="lazy"
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80"
+                  alt="Musterporträt Team 1"
+                />
+                <h3>Vorname Nachname</h3>
+                <p>Funktion / Rolle (Platzhalter)</p>
               </article>
               <article className="team-card animate-hidden" data-animate="team-card">
-                <img loading="lazy" src="/managerin.png" alt="Managerin" />
-                <h3>Fireweyni</h3>
-                <p>Managerin</p>
+                <img
+                  loading="lazy"
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80"
+                  alt="Musterporträt Team 2"
+                />
+                <h3>Vorname Nachname</h3>
+                <p>Funktion / Rolle (Platzhalter)</p>
               </article>
             </div>
           </div>
@@ -441,31 +450,31 @@ export default function HabeshaHome() {
         >
           <div className="container">
             <h2 className="animate-hidden" data-animate="reviews-heading">
-              Was unsere Gäste sagen
+              Beispiel-Bewertungen
             </h2>
-            <p className="sub">4.5★ auf Google</p>
+            <p className="sub">Muster · keine echten Google-Daten</p>
             <div className="reviews-viewport">
               <div className="reviews-track" id="reviewsTrack">
                 <article className="review-card animate-hidden" data-animate="review-left">
                   <div className="stars" aria-label="5 von 5 Sternen">
                     ★★★★★
                   </div>
-                  <p>&quot;Stammkunde seit 2019. Tip Top ist das Mittagsmenü&quot;</p>
-                  <strong>S. Peter</strong>
+                  <p>&quot;Kurzer Beispieltext für eine positive Bewertung.&quot;</p>
+                  <strong>M. Muster</strong>
                 </article>
                 <article className="review-card animate-hidden" data-animate="review-center">
                   <div className="stars" aria-label="5 von 5 Sternen">
                     ★★★★★
                   </div>
-                  <p>&quot;Ich habe das vegetarische Shiro gegessen, einfach sensationell!&quot;</p>
-                  <strong>M. Albert</strong>
+                  <p>&quot;Weiterer Platzhalter — hier echte Zitate einfügen.&quot;</p>
+                  <strong>A. Beispiel</strong>
                 </article>
                 <article className="review-card animate-hidden" data-animate="review-right">
                   <div className="stars" aria-label="4 von 5 Sternen">
                     ★★★★☆
                   </div>
-                  <p>&quot;Loved the diversity and the coffee!&quot;</p>
-                  <strong>J. von Lanz</strong>
+                  <p>&quot;Neutraler Mustertext mit vier Sternen.&quot;</p>
+                  <strong>K. Vorlage</strong>
                 </article>
               </div>
             </div>
@@ -479,49 +488,49 @@ export default function HabeshaHome() {
         >
           <div className="container">
             <h2 className="animate-hidden" data-animate="section-heading">
-              Einblicke
+              Galerie (Musterbilder)
             </h2>
             <div className="gallery-grid" id="galleryGrid">
               <div className="gallery-item animate-hidden" data-animate="gallery-item">
                 <img
                   loading="lazy"
                   src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=900&q=80"
-                  alt="Habesha Gericht 1"
+                  alt="Muster Galerie 1"
                 />
               </div>
               <div className="gallery-item animate-hidden" data-animate="gallery-item">
                 <img
                   loading="lazy"
                   src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80"
-                  alt="Habesha Ambiente 2"
+                  alt="Muster Galerie 2"
                 />
               </div>
               <div className="gallery-item animate-hidden" data-animate="gallery-item">
                 <img
                   loading="lazy"
                   src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=80"
-                  alt="Habesha Gericht 3"
+                  alt="Muster Galerie 3"
                 />
               </div>
               <div className="gallery-item animate-hidden" data-animate="gallery-item">
                 <img
                   loading="lazy"
                   src="https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?auto=format&fit=crop&w=900&q=80"
-                  alt="Habesha Gericht 4"
+                  alt="Muster Galerie 4"
                 />
               </div>
               <div className="gallery-item animate-hidden" data-animate="gallery-item">
                 <img
                   loading="lazy"
                   src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=900&q=80"
-                  alt="Habesha Getränk 5"
+                  alt="Muster Galerie 5"
                 />
               </div>
               <div className="gallery-item animate-hidden" data-animate="gallery-item">
                 <img
                   loading="lazy"
                   src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
-                  alt="Habesha Gericht 6"
+                  alt="Muster Galerie 6"
                 />
               </div>
             </div>
@@ -596,20 +605,20 @@ export default function HabeshaHome() {
               </div>
 
               <div className="card contact-info animate-hidden" id="kontakt" data-animate="contact-map">
-                <h3 style={{ marginBottom: 8 }}>Kontakt</h3>
+                <h3 style={{ marginBottom: 8 }}>Kontakt (Muster)</h3>
                 <p>
-                  <strong>Adresse:</strong> Schreinerstrasse 64, 8004 Zürich
+                  <strong>Adresse:</strong> Musterstrasse 1, 8000 Musterstadt
                 </p>
                 <p>
-                  <strong>Telefon:</strong> 076 468 88 60
+                  <strong>Telefon:</strong> +41 00 000 00 00
                 </p>
                 <p>
-                  <strong>Email:</strong> info@restaurant-habesha.ch
+                  <strong>Email:</strong> kontakt@example.com
                 </p>
                 <div className="map-wrap">
                   <iframe
-                    title="Google Maps Restaurant Habesha"
-                    src="https://www.google.com/maps?q=Schreinerstrasse+64,+8004+Zurich&output=embed"
+                    title="Karte Platzhalter Musterstrasse"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=8.52%2C47.36%2C8.55%2C47.39&amp;layer=mapnik"
                     width="100%"
                     height={220}
                     style={{ border: 0 }}
@@ -617,7 +626,7 @@ export default function HabeshaHome() {
                     referrerPolicy="no-referrer-when-downgrade"
                   />
                 </div>
-                <h3 style={{ marginBottom: 8 }}>Öffnungszeiten</h3>
+                <h3 style={{ marginBottom: 8 }}>Öffnungszeiten (Muster)</h3>
                 <table className="hours-table" aria-label="Öffnungszeiten">
                   <tbody>
                     <tr>
@@ -648,8 +657,8 @@ export default function HabeshaHome() {
         <div className="container">
           <div className="footer-top">
             <div>
-              <h3>HABESHA</h3>
-              <p>A Taste of East Africa</p>
+              <h3>MUSTER</h3>
+              <p>Restaurant-Website Vorlage</p>
             </div>
             <div>
               <h4>Navigation</h4>
@@ -658,7 +667,7 @@ export default function HabeshaHome() {
                   <a href="#menu">Menü</a>
                 </li>
                 <li>
-                  <a href="#kaffee">Kaffee</a>
+                  <a href="#erlebnis">Erlebnis</a>
                 </li>
                 <li>
                   <a href="#ueber-uns">Über uns</a>
@@ -669,7 +678,7 @@ export default function HabeshaHome() {
               </ul>
             </div>
             <div>
-              <h4>Öffnungszeiten</h4>
+              <h4>Öffnungszeiten (Muster)</h4>
               <ul>
                 <li>Mo-Do: 11:30 - 22:00</li>
                 <li>Fr: 11:30 - 23:00</li>
@@ -680,14 +689,14 @@ export default function HabeshaHome() {
             <div>
               <h4>Kontakt</h4>
               <ul>
-                <li>Schreinerstrasse 64, 8004 Zürich</li>
-                <li>076 468 88 60</li>
-                <li>info@restaurant-habesha.ch</li>
+                <li>Musterstrasse 1, 8000 Musterstadt</li>
+                <li>+41 00 000 00 00</li>
+                <li>kontakt@example.com</li>
               </ul>
             </div>
           </div>
           <div className="footer-bottom">
-            © 2026 Restaurant Habesha · Alle Rechte vorbehalten
+            © 2026 Restaurant-Vorlage (Muster) · Alle Rechte vorbehalten
           </div>
         </div>
       </footer>
@@ -701,8 +710,8 @@ export default function HabeshaHome() {
       </div>
 
       <div className="curtain" id="pageCurtain" aria-hidden="true">
-        <div className="curtain-label">HABESHA</div>
-        <div className="curtain-subtitle">A Taste of East Africa</div>
+        <div className="curtain-label">MUSTER</div>
+        <div className="curtain-subtitle">Restaurant-Website Vorlage</div>
       </div>
     </>
   );

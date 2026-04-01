@@ -1,4 +1,4 @@
-# Build and run Restaurant Habesha (Next.js standalone)
+# Build and run Restaurant template (Next.js standalone)
 FROM node:20-alpine AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app

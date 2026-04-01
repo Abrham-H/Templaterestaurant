@@ -6,7 +6,7 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   {
-    files: ["src/lib/habesha-init.ts"],
+    files: ["src/lib/restaurant-template-init.ts"],
     rules: {
       "@typescript-eslint/ban-ts-comment": "off",
     },

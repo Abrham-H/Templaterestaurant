@@ -16,14 +16,14 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Restaurant Habesha | Zürich",
+  title: "Restaurant Vorlage | Muster",
   description:
-    "Authentische Spezialitäten aus Äthiopien & Eritrea. Schreinerstrasse 64, 8004 Zürich.",
-  metadataBase: new URL("https://restaurant-habesha.ch"),
+    "Neutrale Restaurant-Website-Vorlage mit Platzhaltertext, Musterbildern und Beispiel-Videos.",
+  metadataBase: new URL("https://example.com"),
   openGraph: {
-    title: "Restaurant Habesha | Zürich",
+    title: "Restaurant Vorlage | Muster",
     description:
-      "Authentische Spezialitäten aus Äthiopien & Eritrea. A Taste of East Africa.",
+      "Neutrale Restaurant-Website-Vorlage — Texte, Bilder und Videos anpassen.",
     locale: "de_CH",
     type: "website",
   },
