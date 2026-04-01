@@ -706,7 +706,7 @@ export default function RestaurantTemplateHome() {
       </button>
 
       <div className="lightbox" id="lightbox" aria-hidden="true">
-        <img src="" alt="Vergrößertes Bild" id="lightboxImg" />
+        <img alt="Vergrößertes Bild" id="lightboxImg" />
       </div>
 
       <div className="curtain" id="pageCurtain" aria-hidden="true">
